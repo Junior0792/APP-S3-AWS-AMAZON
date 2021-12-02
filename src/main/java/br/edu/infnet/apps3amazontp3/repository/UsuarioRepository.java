@@ -12,6 +12,8 @@ public interface UsuarioRepository extends CrudRepository<Usuario, Integer>{
 
 	@Query("from Usuario user where user.email =:email")
 	public Optional<Usuario> findByEmail(String email);
+
+	public Usuario save(String email);
 	
 	
 }
